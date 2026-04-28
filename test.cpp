@@ -8,25 +8,23 @@ using ::testing::StrEq;
 
 class MockEmailService : public EmailService {
  public:
-  MOCK_METHOD(bool, sendEmail, (const std::string& email, const std::string& message), (override));
+  MOCK_METHOD(bool, sendEmail, (const std::string& to, const std::string& subject, const std::string& body), (override));
 };
 
 TEST(UserRegistrationTest, SendsWelcomeEmail) {
   MockEmailService mock;
-
   UserRegistration reg(&mock);
 
-  EXPECT_CALL(mock, sendEmail(StrEq("ali@test.com"), StrEq("Welcome Ali"))).WillOnce(Return(true));
+  EXPECT_CALL(mock, sendEmail(StrEq("ali@test.com"), StrEq("Welcome"), StrEq("Hello Ali"))).WillOnce(Return(true));
 
   EXPECT_TRUE(reg.registerUser("Ali", "ali@test.com"));
 }
 
 TEST(UserRegistrationTest, ReturnsFalseWhenEmailFails) {
   MockEmailService mock;
-
   UserRegistration reg(&mock);
 
-  EXPECT_CALL(mock, sendEmail(StrEq("bob@test.com"), StrEq("Welcome Bob"))).WillOnce(Return(false));
+  EXPECT_CALL(mock, sendEmail(StrEq("bob@test.com"), StrEq("Welcome"), StrEq("Hello Bob"))).WillOnce(Return(false));
 
   EXPECT_FALSE(reg.registerUser("Bob", "bob@test.com"));
 }
