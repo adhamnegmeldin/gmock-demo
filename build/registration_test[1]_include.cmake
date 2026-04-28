@@ -1,0 +1,5 @@
+if(EXISTS "/home/adham/ex2/gmock-demo/build/registration_test[1]_tests.cmake")
+  include("/home/adham/ex2/gmock-demo/build/registration_test[1]_tests.cmake")
+else()
+  add_test(registration_test_NOT_BUILT registration_test_NOT_BUILT)
+endif()

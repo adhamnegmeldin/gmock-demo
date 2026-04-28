@@ -1,0 +1,4 @@
+/home/adham/ex2/gmock-demo/build/CMakeFiles/prime_test.dir
+/home/adham/ex2/gmock-demo/build/CMakeFiles/test.dir
+/home/adham/ex2/gmock-demo/build/CMakeFiles/edit_cache.dir
+/home/adham/ex2/gmock-demo/build/CMakeFiles/rebuild_cache.dir

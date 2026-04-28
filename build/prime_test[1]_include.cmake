@@ -1,0 +1,5 @@
+if(EXISTS "/home/adham/ex2/gmock-demo/build/prime_test[1]_tests.cmake")
+  include("/home/adham/ex2/gmock-demo/build/prime_test[1]_tests.cmake")
+else()
+  add_test(prime_test_NOT_BUILT prime_test_NOT_BUILT)
+endif()

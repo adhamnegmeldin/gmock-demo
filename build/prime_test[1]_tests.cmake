@@ -1,0 +1,7 @@
+add_test([=[UserRegistrationTest.SendsWelcomeEmail]=]  /home/adham/ex2/gmock-demo/build/prime_test [==[--gtest_filter=UserRegistrationTest.SendsWelcomeEmail]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[UserRegistrationTest.SendsWelcomeEmail]=]  PROPERTIES WORKING_DIRECTORY /home/adham/ex2/gmock-demo/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[UserRegistrationTest.ReturnsFalseWhenEmailFails]=]  /home/adham/ex2/gmock-demo/build/prime_test [==[--gtest_filter=UserRegistrationTest.ReturnsFalseWhenEmailFails]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[UserRegistrationTest.ReturnsFalseWhenEmailFails]=]  PROPERTIES WORKING_DIRECTORY /home/adham/ex2/gmock-demo/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[UserRegistrationTest.ReturnsFalseWhenEmailFailsForAdham]=]  /home/adham/ex2/gmock-demo/build/prime_test [==[--gtest_filter=UserRegistrationTest.ReturnsFalseWhenEmailFailsForAdham]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[UserRegistrationTest.ReturnsFalseWhenEmailFailsForAdham]=]  PROPERTIES WORKING_DIRECTORY /home/adham/ex2/gmock-demo/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  prime_test_TESTS UserRegistrationTest.SendsWelcomeEmail UserRegistrationTest.ReturnsFalseWhenEmailFails UserRegistrationTest.ReturnsFalseWhenEmailFailsForAdham)
